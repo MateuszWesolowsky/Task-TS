@@ -25,7 +25,7 @@ export const HomePage = () => {
         isLoading={isLoading}
         isError={isError}
       />
-      <Pagination data={people} />
+      <Pagination />
     </div>
   );
 };
