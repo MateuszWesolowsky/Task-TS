@@ -5,6 +5,7 @@ export const useFetchCharacterDetails = (id?: string) => {
   return useQuery({
     queryKey: ['character', id],
     queryFn: () => fetchCharacterDetails(id!),
+    keepPreviousData: true,
     enabled: !!id,
     retry: 1,
     staleTime: 60_000,
