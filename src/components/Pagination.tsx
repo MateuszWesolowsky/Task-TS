@@ -1,10 +1,12 @@
 import { Button } from './Button';
 import { usePeopleStore } from '../store/usePeopleStore';
 
-export const Pagination = () => {
-  const { page, setPage, count } = usePeopleStore();
+interface Props {
+  totalPages: number;
+}
 
-  const totalPages = Math.ceil(count / 10);
+export const Pagination = ({ totalPages }: Props) => {
+  const { page, setPage } = usePeopleStore();
 
   const handlePreviousePageClick = () => {
     setPage(page - 1);
