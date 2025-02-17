@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Star Wars Data Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that consumes the [SWAPI](https://swapi.dev/) (Star Wars API) to display data in a table with pagination, filtering, and detailed view.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Star Wars Data Explorer** enables users to:
 
-## Expanding the ESLint configuration
+- Browse Star Wars characters
+- Navigate through pages of data using pagination
+- Filter/search for characters by name
+- View detailed information by clicking on a table row
+- Enjoy a responsive, modern user interface with error handling and loading states
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Data Display:**  
+  Renders data from SWAPI in a well-structured table.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Pagination:**  
+  Navigate through data pages using Previous/Next buttons.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Filtering:**  
+  Filter characters by name in real-time.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Detail View:**  
+  Click on a character row to see detailed information fetched via a custom hook.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Global State Management:**  
+  Uses Zustand to manage and share state across components.
+
+## Technologies Used
+
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **TypeScript**
+- **React Query**
+- **Axios**
+
+## Installation
+
+- **git clone**
+- **npm install**
+- **npm run dev**
