@@ -1,7 +1,7 @@
-import { useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { fetchPeople } from '../api/peopleApi';
 import { usePeopleStore } from '../store/usePeopleStore';
-import { PeopleResponse } from '../types/types';
+import { useEffect } from 'react';
 
 export const useFetchPeople = (search: string, page: number) => {
   const { setCount } = usePeopleStore();
@@ -12,14 +12,15 @@ export const useFetchPeople = (search: string, page: number) => {
   } = useQuery({
     queryKey: ['people', search, page],
     queryFn: () => fetchPeople(search, page),
-    keepPreviousData: true,
+    placeholderData: keepPreviousData,
     retry: 1,
     staleTime: 60_000,
-    onSuccess: (people: PeopleResponse) => {
-      if (!setCount) return;
-      setCount(people.count);
-    },
   });
+
+  useEffect(() => {
+    if (!people) return;
+    setCount(people?.count);
+  }, [people, setCount]);
 
   return { people, isLoading, isError };
 };
