@@ -4,6 +4,8 @@ import { usePeopleStore } from '../store/usePeopleStore';
 export const Pagination = () => {
   const { page, setPage, count } = usePeopleStore();
 
+  const totalPages = Math.ceil(count / 10);
+
   const handlePreviousePageClick = () => {
     setPage(page - 1);
   };
@@ -11,8 +13,6 @@ export const Pagination = () => {
   const handleNextPageClick = () => {
     setPage(page + 1);
   };
-
-  const totalPages = Math.ceil(count / 10);
 
   return (
     <div className="flex gap-4 justify-center items-center mt-4">
@@ -22,7 +22,7 @@ export const Pagination = () => {
       <p className="text-center">
         Page {page} of {totalPages}
       </p>
-      <Button onClick={handleNextPageClick} disabled={page < totalPages}>
+      <Button onClick={handleNextPageClick} disabled={page === totalPages}>
         Next
       </Button>
     </div>
