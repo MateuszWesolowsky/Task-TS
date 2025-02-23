@@ -11,7 +11,6 @@ export const useFetchPeople = (search: string, page: number) => {
     queryFn: () => fetchPeople(search, page),
     placeholderData: keepPreviousData,
     retry: 1,
-    staleTime: 60_000,
   });
 
   return { people, isLoading, isError };
