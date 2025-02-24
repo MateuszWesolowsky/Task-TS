@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 :root {
-  --color-primary: rgb(199, 199, 199);
+  --color-primary: linear-gradient(135deg, #e0f7fa, #80deea);
 }
 
 * {
@@ -16,4 +16,5 @@ body {
   box-sizing: border-box;
   font-family: 'Lora', sans-serif;
   background: var(--color-primary);
+  height: 100vh;
 }
