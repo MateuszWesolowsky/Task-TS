@@ -4,7 +4,7 @@ import { PeopleTableList } from '../components/PeopleTableList';
 
 export const HomePage = () => {
   return (
-    <div className="p-2 sm:p-4 mt-8">
+    <div className="p-2 sm:p-4">
       <Header
         title={'Star Wars Data Explorer'}
         description={
