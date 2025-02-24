@@ -9,7 +9,7 @@ export const FilterInput = () => {
         value={search}
         placeholder="Search by name"
         onChange={(e) => setSearch(e.target.value)}
-        className="w-full px-4 py-2 text-gray-700 border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full p-2 border border-gray-300 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
       />
     </div>
   );
