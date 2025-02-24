@@ -20,35 +20,27 @@ export const PeopleTableList = () => {
   return (
     <div>
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto bg-white border border-gray-300 shadow-lg">
+        <table className="min-w-full table-auto bg-white border border-gray-200">
           <thead>
-            <tr className="bg-gray-100 text-center">
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Name
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Height
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Mass
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Birth Year
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Eye color
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Hair color
-              </th>
-              <th className="border border-gray-400 p-2 whitespace-nowrap">
-                Skin color
-              </th>
+            <tr className="bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-center">
+              {[
+                'Name',
+                'Height',
+                'Mass',
+                'Birth Year',
+                'Eye Color',
+                'Hair Color',
+                'Skin Color',
+              ].map((heading) => (
+                <th key={heading} className="p-3 border border-gray-300">
+                  {heading}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            {people?.results.map((person) => (
-              <PeopleTableRow data={person} key={Math.random()} />
+            {people?.results.map((person, index) => (
+              <PeopleTableRow data={person} key={person.name + index} />
             ))}
           </tbody>
         </table>

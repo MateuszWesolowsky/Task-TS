@@ -23,26 +23,26 @@ export const PeopleTableRow = ({
 
   return (
     <tr
-      className="text-center hover:bg-gray-100 cursor-pointer"
+      className="text-center transition-colors duration-200 hover:bg-indigo-100 cursor-pointer even:bg-gray-50"
       onClick={() => handleOnClick(url)}
     >
-      <td className="border border-gray-400 p-2 whitespace-nowrap">{name}</td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">{name}</td>
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {height} cm
       </td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {mass} kg
       </td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {birth_year}
       </td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {eye_color}
       </td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {hair_color}
       </td>
-      <td className="border border-gray-400 p-2 whitespace-nowrap">
+      <td className="border border-gray-300 p-2 whitespace-nowrap">
         {skin_color}
       </td>
     </tr>
