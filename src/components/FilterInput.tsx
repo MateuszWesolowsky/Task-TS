@@ -3,7 +3,7 @@ import { usePeopleStore } from '../store/usePeopleStore';
 export const FilterInput = () => {
   const { search, setSearch } = usePeopleStore();
   return (
-    <div className="w-fit mx-auto mb-3">
+    <div className="w-full sm:w-fit mb-3">
       <input
         type="text"
         value={search}
