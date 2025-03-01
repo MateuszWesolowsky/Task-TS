@@ -16,5 +16,6 @@ body {
   box-sizing: border-box;
   font-family: 'Lora', sans-serif;
   background: var(--color-primary);
+  background-attachment: fixed;
   height: 100vh;
 }
