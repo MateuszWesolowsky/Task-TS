@@ -23,10 +23,10 @@ export const CharacterDetails = ({
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto mt-[70px]">
       <table className="table-auto w-full bg-white border border-gray-300 shadow-lg">
         <thead>
-          <tr className="bg-gray-100 text-center">
+          <tr className="bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-center">
             <th className="border border-gray-400 p-2">Name</th>
             <th className="border border-gray-400 p-2">Gender</th>
             <th className="border border-gray-400 p-2">Homeworld</th>
